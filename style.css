@@ -88,7 +88,7 @@
   transition: all 100ms linear;
 }
 .keypad .operator:not([value="C"]){
-  color: rgb(39, 235, 169);
+  color: #16e9a3;
 }
 .keypad > button:active{
   transform: scale(1.1);
