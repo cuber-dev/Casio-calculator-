@@ -32,7 +32,6 @@
   font-weight: bold;
 }
 .container > .text p > span{
-  display: inline-block;
   float: right;
   height: 25px;
   width: 25px;
@@ -71,7 +70,7 @@
 
 .keypad{
     width: 100%;
-    margin: 20px 0 0 0;
+    margin: 25px 0 0 0;
     display: grid;
     gap: 13px;
     padding: 0 0 0 10px;
