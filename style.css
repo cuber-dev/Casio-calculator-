@@ -123,6 +123,7 @@
    .keypad{
      grid-template-columns: repeat(4,20.5%);
     grid-template-rows: repeat(5,25%);
-  
+    -webkit-grid-template-columns: repeat(4, 20.5%);
+    -webkit-grid-template-rows: repeat(5, 25%);
    }
 }
