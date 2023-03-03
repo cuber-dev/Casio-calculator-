@@ -75,7 +75,6 @@
     gap: 13px;
     padding: 0 0 0 10px;
     grid-template-columns: repeat(4,20%);
-    /* grid-template-rows: repeat(5,21%); */
 }
 .keypad > button{
   border: 2px solid black;
