@@ -81,7 +81,7 @@
   background: none;
   font-weight: bold;
   font-size: 23px;
-  padding:8px;
+  padding:12%;
   border-radius: 5px;
   box-shadow: 2.5px 2.5px 0px #000;
   transition: all 100ms linear;
@@ -119,8 +119,8 @@
       width: 88%;
       height: 90%;
     }
-    .keypad button{
-        padding:10px;
+    .keypad > button{
+        padding:15%;
     }
    .keypad{
      grid-template-columns: repeat(4,20.5%);
