@@ -70,18 +70,19 @@
 
 .keypad{
     width: 100%;
-    margin: 25px 0 0 0;
+    margin: 17px 0 0 0;
     display: grid;
     gap: 13px;
     padding: 0 0 0 10px;
     grid-template-columns: repeat(4,20%);
-    grid-template-rows: repeat(5,21%);
+    /* grid-template-rows: repeat(5,21%); */
 }
 .keypad > button{
   border: 2px solid black;
   background: none;
   font-weight: bold;
   font-size: 23px;
+  padding:8px;
   border-radius: 5px;
   box-shadow: 2.5px 2.5px 0px #000;
   transition: all 100ms linear;
@@ -119,10 +120,11 @@
       width: 88%;
       height: 90%;
     }
+    .keypad button{
+        padding:10px;
+    }
    .keypad{
      grid-template-columns: repeat(4,20.5%);
-    grid-template-rows: repeat(5,25%);
-    -webkit-grid-template-columns: repeat(4, 20.5%);
-    -webkit-grid-template-rows: repeat(5, 25%);
+     margin-top: 25px;
    }
 }
