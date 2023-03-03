@@ -103,17 +103,7 @@
   grid-column: 4;
   grid-row: 4/6;
   background-color: #ff2020;
-}/*
- [value="*"]{
-  grid-column: 4;
 }
-[value="-"]{
-  grid-column: 4;
-}
-[value="+"]{
-  grid-column: 4;
-  grid-row:1;
-}*/
 @media (max-width: 550px){
     .container{
       width: 88%;
