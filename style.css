@@ -70,7 +70,7 @@
 
 .keypad{
     width: 100%;
-    margin: 17px 0 0 0;
+    margin-top: 11% ;
     display: grid;
     gap: 13px;
     padding: 0 0 0 10px;
@@ -116,7 +116,7 @@
 }
 @media (max-width: 550px){
     .container{
-      width: 88%;
+      width: 90%;
       height: 90%;
     }
     .keypad > button{
@@ -124,6 +124,5 @@
     }
    .keypad{
      grid-template-columns: repeat(4,20.5%);
-     margin-top: 25px;
    }
 }
