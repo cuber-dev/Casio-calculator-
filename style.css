@@ -18,13 +18,13 @@
   display: inline-block;
   height: 555px;
   width: 290px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 10px;
   border: 3px solid rgb(0, 0, 0);
 }
  
 .container > .text{
-  padding: 10px 15px;
+  padding: 10px 0px;
   margin: 0;
 }
 .container > .text p{
@@ -46,8 +46,7 @@
 }
 #input-value{
   height: 20%;
-  width: 85%;
-  margin: 0 12px;
+  width: 90%;
   padding: 10px;
   font-size: 26px;
   position: relative;
@@ -70,11 +69,10 @@
 
 .keypad{
     width: 100%;
-    margin-top: 10% ;
+    margin-top: 8% ;
     display: grid;
     gap: 13px;
-    padding: 0 0 0 10px;
-    grid-template-columns: repeat(4,20%);
+    grid-template-columns: repeat(4,21%);
 }
 .keypad > button{
   border: 2px solid black;
@@ -106,13 +104,13 @@
 }
 @media (max-width: 550px){
     .container{
-      width: 88%;
+      width: 85%;
       height: 90%;
     }
     .keypad > button{
         padding:15%;
     }
    .keypad{
-     grid-template-columns: repeat(4,20.5%);
+     grid-template-columns: repeat(4,21.5%);
    }
 }
