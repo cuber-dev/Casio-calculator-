@@ -95,7 +95,7 @@
   color:white;
   border:none;
 }
-[value="="] ,#equals{
+#equals{
   border: none;
   color:white;
   grid-column: 4;
