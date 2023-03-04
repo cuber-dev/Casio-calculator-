@@ -15,7 +15,10 @@
   left: 50%;
   transform: translate(-50%,-50%);
   background-color: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  /* align-items: center; */
   height: 595px;
   width: 290px;
   padding: 16px;
@@ -47,6 +50,7 @@
 #input-value{
   height: 20%;
   width: 90%;
+  margin-bottom: 3%;
   padding: 10px;
   font-size: 26px;
   position: relative;
@@ -69,7 +73,7 @@
 
 .keypad{
     width: 100%;
-    margin-top: 5% ;
+    margin-bottom: 3%;
     display: grid;
     gap: 13px;
     grid-template-columns: repeat(4,21%);
@@ -105,6 +109,7 @@
 @media (max-width: 550px){
     .container{
       width: 85%;
+      height: 90%;
     }
     .keypad > button{
         padding:15%;
