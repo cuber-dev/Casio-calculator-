@@ -108,8 +108,8 @@
 }
 @media (max-width: 550px){
     .container{
-      width: 85%;
-      height: 90%;
+      width: 83%;
+      height:min(90%,600px);
     }
     .keypad > button{
         padding:15%;
