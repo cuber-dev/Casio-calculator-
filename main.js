@@ -1,3 +1,9 @@
+document.addEventListener('selectstart',
+                          () => false);
+document.addEventListener('mousedown',
+                          () => false);
+
+
 let display = document.getElementById('display');
 let buttons = document.querySelectorAll('button');
 

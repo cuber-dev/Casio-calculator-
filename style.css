@@ -18,6 +18,10 @@
   width: 0;
   height: 0;
 }
+body {
+  user-select: none;
+}
+
 .container{
   position: absolute;
   top: 50%;
