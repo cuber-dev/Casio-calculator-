@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  scrollbar-color: transparent transparent;
 }
   :root{
     --color: linear-gradient(
@@ -8,6 +9,14 @@
                            lightpink,
                            yellow
        );
+}
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-slider-thumb{
+  background: transparent;
+  color: transparent;
+  width: 0;
+  height: 0;
 }
 .container{
   position: absolute;
@@ -61,6 +70,7 @@
   justify-content: end; 
   align-items: end; 
   position: relative;
+  text-overflow: ellipsis;
  }
  #input-value #display{
    display: block;
@@ -69,6 +79,8 @@
    max-height: 100%;
    line-height: 30px; 
    overflow: auto;
+   overflow-clip-box: ellipsis;
+   text-overflow: ellipsis;
 }
 
 .keypad{
