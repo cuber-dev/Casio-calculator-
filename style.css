@@ -88,7 +88,7 @@
   box-shadow: 2.5px 2.5px 0px #000;
   transition: all 100ms linear;
 }
-.keypad .operator:not([value="C"]){
+.keypad .operator:not([value="C"],[value="DE"]){
   color: #16e9a3;
 }
 .keypad > button:active{
@@ -97,6 +97,11 @@
 .keypad > [value="C"]{
   background: #ff3399; 
   color:white;
+  border:none;
+}
+.keypad > [value="DE"]{
+  background: #F849A1; 
+  color: white ;
   border:none;
 }
 #equals{

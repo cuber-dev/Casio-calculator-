@@ -6,8 +6,17 @@ buttons.forEach((button) => {
     if(button.value === "C"){
       display.textContent = "0";
     }
+    else if(button.value === "DE"){
+      let exp = display.textContent;
+      display.textContent = exp.slice(0,-1);
+    }
     else if(button.value === "="){
-      display.textContent = eval(display.textContent);
+      try{
+        let result = eval(display.textContent);
+        display.textContent = result;
+      }catch(e){
+        display.textContent = 'Invalid expression';
+      }
     }
     else{
       if(display.textContent === "0"){
