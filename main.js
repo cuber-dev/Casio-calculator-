@@ -19,7 +19,7 @@ buttons.forEach((button) => {
       }
     }
     else{
-      if(display.textContent === "0"){
+      if(display.textContent === "0" || display.textContent === "Invalid expression"){
         display.textContent = button.value;
       }
       else{
