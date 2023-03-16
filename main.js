@@ -12,7 +12,7 @@ buttons.forEach((button) => {
     }
     else if(button.value === "="){
       try{
-        let result = eval(display.textContent);
+        let result = eval(display.textContent.replace('x','*'));
         display.textContent = result;
       }catch(e){
         display.textContent = 'Invalid expression';
