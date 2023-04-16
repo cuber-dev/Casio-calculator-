@@ -13,7 +13,7 @@ buttons.forEach((button) => {
     else if(button.value === "="){
       try{
         let exp = display.innerText.replace('x','*');
-        let result = eval(display.innerText.replace(',',''));
+        let result = eval(exp.replace(',',''));
         display.innerText = result.toLocaleString();
       }catch(e){
         display.innerText = 'Invalid expression';
