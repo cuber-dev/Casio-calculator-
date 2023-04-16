@@ -4,28 +4,29 @@ let buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   button.addEventListener('click',() => {
     if(button.value === "C"){
-      display.textContent = "0";
+      display.innerText = "0";
     }
     else if(button.value === "DE"){
-      let exp = display.textContent;
-      display.textContent = exp.slice(0,exp.length - 1);
+      let exp = display.innerText;
+      display.innerText = exp.slice(0,exp.length - 1);
     }
     else if(button.value === "="){
       try{
-        let exp = display.textContent.replace('x','*');
-        let result = eval(display.textContent.replace(',',''));
-        display.textContent = result.toLocaleString();
+        let exp = display.innerText.replace('x','*');
+        let result = eval(display.innerText.replace(',',''));
+        display.innerText = result.toLocaleString();
       }catch(e){
-        display.textContent = 'Invalid expression';
+        display.innerText = 'Invalid expression';
       }
     }
     else{
-      if(display.textContent === "0" || display.textContent === "Invalid expression"){
-        display.textContent = button.value;
-      }
-      else{
-        display.textContent += button.value;
-        display.textContent = display.textContent.toLocaleString();
+      if(display.innerText === "0" || display.innerText === "Invalid expression"){
+        display.innerText = button.value;
+      }else if(display.innerText.includes('.') && button.value === '.'){
+        display.innerText
+      }else{
+        display.innerText += button.value;
+        display.innerText = display.innerText.toLocaleString();
       }
     }
   });
