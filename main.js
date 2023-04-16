@@ -8,12 +8,13 @@ buttons.forEach((button) => {
     }
     else if(button.value === "DE"){
       let exp = display.textContent;
-      display.textContent = exp.slice(0,-1);
+      display.textContent = exp.slice(0,exp.length - 1);
     }
     else if(button.value === "="){
       try{
-        let result = eval(display.textContent.replace('x','*'));
-        display.textContent = result;
+        let exp = display.textContent.replace('x','*');
+        let result = eval(display.textContent.replace(',',''));
+        display.textContent = result.toLocaleString();
       }catch(e){
         display.textContent = 'Invalid expression';
       }
@@ -24,6 +25,7 @@ buttons.forEach((button) => {
       }
       else{
         display.textContent += button.value;
+        display.textContent = display.textContent.toLocaleString();
       }
     }
   });
