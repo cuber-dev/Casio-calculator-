@@ -32,8 +32,8 @@ body {
   flex-direction: column; 
   justify-content: space-between;
   /* align-items: center; */
-  height: 495px;
-  width: 290px;
+  height: 523px;
+  width: 300px;
   padding: 16px;
   border-radius: 10px;
   border: 3px solid rgb(0, 0, 0);
