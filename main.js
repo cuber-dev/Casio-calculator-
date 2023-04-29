@@ -14,7 +14,7 @@ buttons.forEach((button) => {
       try{
         let exp = display.innerText.replace('x','*');
         let result = eval(exp.replace(',',''));
-        display.innerText = String(result).includes('+') ? result : result.toLocaleString();
+        display.innerText = String(result).includes('+') || String(result).includes('e') ? result : result.toLocaleString();
       }catch(e){
         display.innerText = 'Invalid expression';
       }
@@ -22,7 +22,9 @@ buttons.forEach((button) => {
     else{
       if(display.innerText === "0" || display.innerText === "Invalid expression"){
         display.innerText = button.value;
-      }else if(display.innerText.includes('.') && button.value === '.'){
+      }else if(/[+\/*\-%]$/.test(display.innerText) && /[+\/*\-%]/.test(button.value)){
+        display.innerText = display.innerText.slice(0, -1) + button.value;
+      } else if(display.innerText.includes('.') && button.value === '.'){
         return;
       }else{
         display.innerText += button.value;
