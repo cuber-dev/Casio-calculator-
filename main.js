@@ -22,13 +22,7 @@ buttons.forEach((button) => {
     else{
        if(display.innerText === "0" || display.innerText === "Invalid expression"){
         display.innerText = button.value;
-      } else if (display.innerText.slice(-1)) {
-         const op = display.innerText.slice(-1);
-         const isSameOp = ['+','-','/','%','x'].filter(e => e === op)
-         if(isSameOp[0]) return;
-
-         display.innerText += button.value;
-      }else if(/[+\/*\-%]$/.test(display.innerText) && /[+\/*\-%]/.test(button.value)){
+      } else if(/[+\/*\-%]$/.test(display.innerText) && /[+\/*\-%]/.test(button.value)){
         display.innerText = display.innerText.slice(0, -1) + button.value;
       } else{
         display.innerText += button.value;
