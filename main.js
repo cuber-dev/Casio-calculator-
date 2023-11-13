@@ -22,9 +22,7 @@ buttons.forEach((button) => {
     else{
        if(display.innerText === "0" || display.innerText === "Invalid expression"){
         display.innerText = button.value;
-      } else if(/[+\/*\-%]$/.test(display.innerText) && /[+\/*\-%]/.test(button.value)){
-        display.innerText = display.innerText.slice(0, -1) + button.value;
-      } else{
+      }  else{
         display.innerText += button.value;
       }
     }
