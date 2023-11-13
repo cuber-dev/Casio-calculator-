@@ -27,7 +27,7 @@ buttons.forEach((button) => {
          const isSameOp = ['+','-','/','%','x'].filter(e => e === op)
          if(isSameOp[0]) return;
 
-         display.innerText = button.value;
+         display.innerText += button.value;
       }else if(/[+\/*\-%]$/.test(display.innerText) && /[+\/*\-%]/.test(button.value)){
         display.innerText = display.innerText.slice(0, -1) + button.value;
       } else{
