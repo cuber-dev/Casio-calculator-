@@ -12,8 +12,7 @@
     {
       "src": "./cal-2.webp",
       "sizes": "800x800",
-      "type": "image/webp",
-      "purpose" : "any"
+      "type": "image/webp"
     }
   ],
   "offline_enabled": true
