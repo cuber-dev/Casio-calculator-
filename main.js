@@ -1,30 +1,40 @@
 let display = document.getElementById('display');
 let buttons = document.querySelectorAll('button');
+let calculatorState = "0";
 
 buttons.forEach((button) => {
-  button.addEventListener('click',() => {
-    if(button.value === "C"){
-      display.innerText = "0";
-    }
-    else if(button.value === "DE"){
-      let exp = display.innerText;
-      display.innerText = exp.slice(0,exp.length - 1);
-    }
-    else if(button.value === "="){
-      try{
-        let exp = display.innerText.replace('x','*');
-        let result = eval(exp.replace(',',''));
-        display.innerText = String(result).includes('+') || String(result).includes('e') ? result : result.toLocaleString();
-      }catch(e){
-        display.innerText = 'Invalid expression';
-      }
-    }
-    else{
-       if(display.innerText === "0" || display.innerText === "Invalid expression"){
-        display.innerText = button.value;
-      }  else{
-        display.innerText += button.value;
-      }
-    }
+  button.addEventListener('click', () => {
+    handleButtonClick(button.value);
+    updateDisplay();
   });
 });
+
+function handleButtonClick(value) {
+  if (value === "C") {
+    calculatorState = "0";
+  } else if (value === "DE") {
+    calculatorState = calculatorState.slice(0, -1);
+  } else if (value === "=") {
+    try {
+      let expression = calculatorState.replace('x', '*');
+      let result = Function('"use strict";return (' + expression + ')')();
+      calculatorState = String(result).includes('+') || String(result).includes('e') ? result : result.toLocaleString();
+    } catch (e) {
+      calculatorState = 'Invalid expression';
+    }
+  } else {
+    if (calculatorState === "0" || calculatorState === "Invalid expression") {
+      calculatorState = value;
+    } else {
+      const lastOperator = calculatorState.slice(-1);
+      const isOperator = lastOperator === '.' || lastOperator === '+' || lastOperator === '-' || lastOperator === '/' || lastOperator === '%' || lastOperator === 'x';
+      const isBtnValueOperator = value === '.' || value === '+' || value === '-' || value === '/' || value === '%' || value === 'x';
+
+      calculatorState = isOperator && isBtnValueOperator ? calculatorState.slice(0,-1) + value : calculatorState + value;
+    }
+  }
+}
+
+function updateDisplay() {
+  display.innerText = calculatorState;
+}

@@ -31,10 +31,11 @@ body {
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
-  /* align-items: center; */
   height: 523px;
   width: 300px;
   padding: 16px;
+  box-shadow:  0 0 10px rgba(0,0,0,0.1),
+  0 0 10px rgba(0,0,0,0.1);
   border-radius: 10px;
   border: 3px solid rgb(0, 0, 0);
 }
@@ -57,7 +58,7 @@ body {
 }
 .container > .text span{
   font-size: 12px;
-  margin: 0 5px;
+  margin: 0 3px;
   font-weight: bold;
 }
 #input-value{
@@ -85,6 +86,7 @@ body {
    overflow: auto;
    overflow-clip-box: ellipsis;
    text-overflow: ellipsis;
+   user-select: text;
 }
 
 .keypad{
@@ -116,7 +118,7 @@ body {
   border:none;
 }
 .keypad > [value="DE"]{
-  background: #F849A1; 
+  background: #ff3399; 
   color: white ;
   border:none;
 }
