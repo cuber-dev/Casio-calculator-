@@ -16,7 +16,7 @@ function handleButtonClick(value) {
     calculatorState = calculatorState.slice(0, -1);
   } else if (value === "=") {
     try {
-      let expression = calculatorState.replace('x', '*');
+      let expression = calculatorState.replace('x', '*').replace(',', '');
       let result = Function('"use strict";return (' + expression + ')')();
       calculatorState = String(result).includes('+') || String(result).includes('e') ? result : result.toLocaleString();
     } catch (e) {
