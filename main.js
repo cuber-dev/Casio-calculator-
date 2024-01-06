@@ -16,10 +16,13 @@ function handleButtonClick(value) {
     calculatorState = calculatorState.slice(0, -1);
   } else if (value === "=") {
     try {
-      let expression = calculatorState.replace('x', '*').replace(',', '');
-      let result = eval(`${expression}`);
+      let expression = calculatorState.replace(/[x]/g, '*').replace(',', '');
+      console.log(expression)
+			let result = eval(`${expression}`);
       calculatorState = String(result).includes('+') || String(result).includes('e') ? result : result.toLocaleString();
     } catch (e) {
+       console.log(e)
+
       calculatorState = 'Invalid expression';
     }
   } else {
