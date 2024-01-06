@@ -17,7 +17,7 @@ function handleButtonClick(value) {
   } else if (value === "=") {
     try {
       let expression = calculatorState.replace('x', '*').replace(',', '');
-      let result = eval(expression);
+      let result = eval(`${expression}`);
       calculatorState = String(result).includes('+') || String(result).includes('e') ? result : result.toLocaleString();
     } catch (e) {
       calculatorState = 'Invalid expression';
